@@ -59,7 +59,14 @@
 </head>
 <body>
     
-    <div style="position:fixed;bottom:24px;left:12px;z-index:9999;background:rgba(15,25,35,.88);color:white;padding:12px 14px;border-radius:6px;font:12px Arial;max-width:270px"><b>Gay Head Cliffs | Offshore reference</b><div style="margin-top:7px">Gold lines: 5,280-ft transects, ~500 ft alongshore<br>Fine ticks: 100 ft (optional); bold ticks: 500 ft<br>Distance labels: every 1,000 ft on two selected lines<br>White coastline: NOAA 2016 mean high water<br>Dashed white: planning district (live)<br><span style="color:#e53935">■</span> GHL &nbsp;<span style="color:#00c8d7">■</span> SRS &nbsp;<span style="color:#ffd600">■</span> DRS</div><div id="noaa-image-status" style="font-size:10px;margin-top:7px;color:#e7e7e7">NOAA charts: requesting seamless image</div><div style="font-size:10px;margin-top:3px;color:#ddd">Chart overlays cover the Gay Head study area. Extreme zoom may enlarge existing detail; areas outside NOAA chart coverage cannot be filled artificially.</div><div id="boundary-status" style="font-size:10px;margin-top:7px;color:#ddd">Planning boundary requested from ArcGIS</div><div style="font-size:10px;margin-top:6px">Reference geometry only; not a navigational chart or surveyed buoy placement.</div></div>
+    <div style="position:fixed;bottom:24px;left:12px;z-index:9999;background:rgba(15,25,35,.9);color:white;padding:11px 13px;border-radius:5px;font:12px Arial,sans-serif;line-height:1.7;min-width:185px;box-shadow:0 2px 8px rgba(0,0,0,.2)">
+      <div style="font-weight:700;font-size:13px;margin-bottom:6px">MAP LEGEND</div>
+      <div><span style="display:inline-block;width:23px;border-top:2px solid #ffd878;vertical-align:middle;margin-right:8px"></span>Offshore transects</div>
+      <div><span style="display:inline-block;width:23px;border-top:2px solid #ffffff;vertical-align:middle;margin-right:8px"></span>NOAA shoreline</div>
+      <div><span style="display:inline-block;width:23px;border-top:2px dashed #ffffff;vertical-align:middle;margin-right:8px"></span>Planning boundary</div>
+      <div style="margin-top:5px"><span style="color:#e53935">■</span> GHL &nbsp; <span style="color:#00c8d7">■</span> SRS &nbsp; <span style="color:#ffd600">■</span> DRS</div>
+      <div id="noaa-image-status" style="display:none"></div><div id="boundary-status" style="display:none"></div>
+    </div>
     
             <div class="folium-map" id="map_e7e6cb654ec69817bb8652a3dfc11048" ></div>
         
@@ -7569,17 +7576,17 @@
                     "Esri World Imagery" : tile_layer_0b72931d651a337c195a28e3b9a5970c,
                 },
                 overlays :  {
-                    "NOAA mean-high-water shoreline (2016)" : feature_group_4140a4e67d57757772f5a514adccdb07,
-                    "Offshore reference transects \u2022 5,280 ft" : feature_group_caddd7c4057e6db62f467aff8cd0f51c,
-                    "100-ft distance ticks (optional)" : feature_group_045d598e3cc8adb447e9788c71cb0dad,
-                    "500-ft major ticks and labels" : feature_group_449c7476ede78efcf8532e3fa5c3f819,
-                    "GHL study site" : feature_group_ed3d131e487da31910d5b9e25a0a951d,
-                    "SRS study site" : feature_group_d2ce6b357a44041489e2bc1cda046a35,
-                    "DRS study site" : feature_group_fd0283999fb6c3255325e2d6ca4b298c,
-                    "NOAA water depths \u2014 contours and soundings" : macro_element_b14b8811fb0fe0a43ae295dac0aab527,
-                    "NOAA underwater features \u2014 obstructions and rocks" : macro_element_1cf07e1a644f6cdb9d721eae6d151325,
-                    "NOAA full chart \u2014 all ENC layers" : macro_element_0fde6bc85b4f36085bae27a44d9a7970,
-                    "Planning boundary \u2022 live ArcGIS" : feature_group_bd68263ddac48769d89d34bfa338b808,
+                    "NOAA shoreline" : feature_group_4140a4e67d57757772f5a514adccdb07,
+                    "Offshore transects" : feature_group_caddd7c4057e6db62f467aff8cd0f51c,
+                    "100-ft ticks" : feature_group_045d598e3cc8adb447e9788c71cb0dad,
+                    "500-ft ticks and labels" : feature_group_449c7476ede78efcf8532e3fa5c3f819,
+                    "GHL" : feature_group_ed3d131e487da31910d5b9e25a0a951d,
+                    "SRS" : feature_group_d2ce6b357a44041489e2bc1cda046a35,
+                    "DRS" : feature_group_fd0283999fb6c3255325e2d6ca4b298c,
+                    "NOAA depths" : macro_element_b14b8811fb0fe0a43ae295dac0aab527,
+                    "NOAA underwater features" : macro_element_1cf07e1a644f6cdb9d721eae6d151325,
+                    "NOAA full chart" : macro_element_0fde6bc85b4f36085bae27a44d9a7970,
+                    "Planning boundary" : feature_group_bd68263ddac48769d89d34bfa338b808,
                 },
             };
             let layer_control_fd07c6bfd19b4526ccf1f1afed392d5f = L.control.layers(
