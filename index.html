@@ -63,20 +63,16 @@
       <div style="font-weight:700;font-size:13px;margin-bottom:6px">MAP LEGEND</div>
       <div><span style="display:inline-block;width:23px;border-top:2px solid #ffd878;vertical-align:middle;margin-right:8px"></span>Offshore transects</div>
       <div><span style="display:inline-block;width:23px;border-top:2px solid #ffffff;vertical-align:middle;margin-right:8px"></span>NOAA shoreline</div>
-      <div><span style="display:inline-block;width:23px;border-top:2px dashed #ffffff;vertical-align:middle;margin-right:8px"></span>Planning boundary</div>
+
       <div style="margin-top:5px"><span style="color:#e53935">■</span> GHL &nbsp; <span style="color:#00c8d7">■</span> SRS &nbsp; <span style="color:#ffd600">■</span> DRS</div>
-      <div id="noaa-image-status" style="display:none"></div><div id="boundary-status" style="display:none"></div>
+      <div id="noaa-image-status" style="display:none"></div>
     </div>
     
             <div class="folium-map" id="map_e7e6cb654ec69817bb8652a3dfc11048" ></div>
         
 </body>
 <script>
-    
-
-    (function(){var layer=feature_group_bd68263ddac48769d89d34bfa338b808;var url="https://services1.arcgis.com/FNsEJ848HT5uDOHD/arcgis/rest/services/zov_aqu/FeatureServer/3/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson";fetch(url).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{if(!d.features||!d.features.length)throw Error('empty');L.geoJSON(d,{style:{color:'white',weight:2,dashArray:'8 6',fillOpacity:0},onEachFeature:(feature,layer)=>layer.bindTooltip('Aquinnah–Gay Head Cliff Area District • planning boundary')}).addTo(layer)}).catch(e=>{console.warn('Planning boundary unavailable',e);document.getElementById('boundary-status').textContent='Planning boundary unavailable (ArcGIS connection)';})})();
-    
-            var map_e7e6cb654ec69817bb8652a3dfc11048 = L.map(
+var map_e7e6cb654ec69817bb8652a3dfc11048 = L.map(
                 "map_e7e6cb654ec69817bb8652a3dfc11048",
                 {
                     center: [41.348, -70.848],
@@ -7509,15 +7505,6 @@
             macro_element_0fde6bc85b4f36085bae27a44d9a7970.on('load', function() { var el=document.getElementById('noaa-image-status'); if(el) el.textContent='NOAA charts: seamless fixed-extent overlay (zoom may resample)'; });
         
     
-            var feature_group_bd68263ddac48769d89d34bfa338b808 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            feature_group_bd68263ddac48769d89d34bfa338b808.addTo(map_e7e6cb654ec69817bb8652a3dfc11048);
-        
-    
             var measure_control_c588f8c4af19ab9795a89a811290998c = new L.Control.Measure(
                 {
   "position": "topleft",
@@ -7587,7 +7574,6 @@
                     "NOAA depths" : macro_element_b14b8811fb0fe0a43ae295dac0aab527,
                     "NOAA underwater features" : macro_element_1cf07e1a644f6cdb9d721eae6d151325,
                     "NOAA full chart" : macro_element_0fde6bc85b4f36085bae27a44d9a7970,
-                    "Planning boundary" : feature_group_bd68263ddac48769d89d34bfa338b808,
                 },
             };
             let layer_control_fd07c6bfd19b4526ccf1f1afed392d5f = L.control.layers(
