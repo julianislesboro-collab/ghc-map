@@ -73,6 +73,7 @@
 </body>
 <script>
     
+
     (function(){var layer=feature_group_bd68263ddac48769d89d34bfa338b808;var url="https://services1.arcgis.com/FNsEJ848HT5uDOHD/arcgis/rest/services/zov_aqu/FeatureServer/3/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson";fetch(url).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{if(!d.features||!d.features.length)throw Error('empty');L.geoJSON(d,{style:{color:'white',weight:2,dashArray:'8 6',fillOpacity:0},onEachFeature:(feature,layer)=>layer.bindTooltip('Aquinnah–Gay Head Cliff Area District • planning boundary')}).addTo(layer)}).catch(e=>{console.warn('Planning boundary unavailable',e);document.getElementById('boundary-status').textContent='Planning boundary unavailable (ArcGIS connection)';})})();
     
             var map_e7e6cb654ec69817bb8652a3dfc11048 = L.map(
@@ -7605,6 +7606,5 @@
                 [[41.33159192960561, -70.85972592075545], [41.36138018452608, -70.83213001418152]],
                 {}
             );
-        
 </script>
 </html>
